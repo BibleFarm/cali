@@ -375,8 +375,8 @@ text-align: center;
 
 /* BEGIN demo only */
 
-#demo_name,
 #demo_title,
+#demo_desc,
 #demo_logo,
 #demo_video,
 #demo_urgencias,
@@ -384,12 +384,13 @@ text-align: center;
 #demo_chat,
 #demo_end {
 color: red;
-font-size: 20px;
+font-size: 30px;
     text-shadow: 2px 2px 1px #000000;
-display: table-cell;
+display: ;
     vertical-align: middle;
     text-align: center;
 	cursor: pointer;
+	width: 100%;
 }
 
 #demo_end {
@@ -571,6 +572,8 @@ $(document).ready(function() {
 ///////////////////////////////////////////////
 $(document).ready(function() {
 
+    $("#PureChatWidget").hide();
+
     $(".cali_title").hide();
     $("#demo_title").hide();
 	
@@ -640,7 +643,7 @@ $("#demo_chat").show("slow");
 
 $("#demo_chat").on("click",function(e){
 $("#demo_chat").css("display", "none");
-    $(".cali_chat").show("slow");
+    $("#PureChatWidget").show("slow");
 setTimeout(function() {
 $("#demo_video").show("slow");
 }, 2000);
