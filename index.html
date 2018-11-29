@@ -467,6 +467,7 @@ Primero tu nombre... Hacé click</div>
 
 <div id="demo_urgencias">Aconsejo que también agreguemos tu número, bien a la vista, para urgencias. Hacé click</div>
 
+<div id="demo_whatsapp">Pongamos también whatsapp, para que la gente pueda entrar en contacto con vos rapidamente, y directamente desde aquí... Hacé click</div>
 	
 <div id="demo_video">Y por último, te producí un video introductorio, que después le agregamos un locutor, que hable a cerca tuyo con la voz en off. A ver si te gusta?... Hacé click</div>
 <div class="cali_video">
@@ -478,7 +479,6 @@ Primero tu nombre... Hacé click</div>
 </div>
 </div>  
 
-<div id="demo_whatsapp">Pongamos también whatsapp, para que la gente pueda entrar en contacto con vos rapidamente, y directamente desde aquí... Hacé click</div>
 <div class="cali_whatsapp">
     <a href="https://wa.me/543764952222/?text=Hola%20Dr.%20Oviedo,%20necesito%20entrar%20en%20contacto%20con%20usted,%20por%20favor. Mi%20nombre%20es:%20"><img class="cali_whatsapp" src="https://image.flaticon.com/icons/png/512/134/134937.png" alt="" width="50" height="50"></a>
 </div>
@@ -605,14 +605,14 @@ $(document).ready(function() {
 	
   setTimeout(function() {
       $("#demo_title").show("slow");
-  }, 2000);
+  }, 3000);
 
 $("#demo_title").on("click",function(e){
 $("#demo_title").css("display", "none");
     $(".cali_title").show("slow");
 setTimeout(function() {
 $("#demo_desc").show("slow");
-}, 2000);
+}, 3000);
 });
 
 $("#demo_desc").on("click",function(e){
@@ -620,7 +620,7 @@ $("#demo_desc").css("display", "none");
     $(".cali_desc").show("slow");
 setTimeout(function() {
 $("#demo_logo").show("slow");
-}, 2000);
+}, 3000);
 });
 
 $("#demo_logo").on("click",function(e){
@@ -628,7 +628,7 @@ $("#demo_logo").css("display", "none");
     $(".cali_logo").show("slow");
 setTimeout(function() {
 $("#demo_urgencias").show("slow");
-}, 2000);
+}, 3000);
 });
 
 $("#demo_urgencias").on("click",function(e){
@@ -636,23 +636,15 @@ $("#demo_urgencias").css("display", "none");
     $("body").find(".cali_urgencias").show("slow");
 setTimeout(function() {
 $("#demo_whatsapp").show("slow");
-}, 2000);
+}, 3000);
 });
 
 $("#demo_whatsapp").on("click",function(e){
 $("#demo_whatsapp").css("display", "none");
     $(".cali_whatsapp").show("slow");
 setTimeout(function() {
-$("#demo_chat").show("slow");
-}, 2000);
-});
-
-$("#demo_chat").on("click",function(e){
-$("#demo_chat").css("display", "none");
-    $("#PureChatWidget").show("slow");
-setTimeout(function() {
 $("#demo_video").show("slow");
-}, 2000);
+}, 3000);
 });
 
 $("#demo_video").on("click",function(e){
@@ -660,7 +652,7 @@ $("#demo_video").css("display", "none");
     $(".cali_video").show("slow");
 setTimeout(function() {
 $("#demo_end").show("slow");
-}, 2000);
+}, 3000);
 });
 
 $("#demo_end").on("click",function(e){
