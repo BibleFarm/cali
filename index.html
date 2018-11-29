@@ -370,6 +370,39 @@ text-align: center;
 font-size: 20px;
 text-align: center;
 }
+
+
+
+/* BEGIN demo only */
+
+#demo_name,
+#demo_title,
+#demo_logo,
+#demo_video,
+#demo_urgencias,
+#demo_whatsapp,
+#demo_chat,
+#demo_end {
+color: red;
+font-size: 20px;
+    text-shadow: 2px 2px 1px #000000;
+display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+	cursor: pointer;
+}
+
+#demo_end {
+font-size: 30px;
+
+}
+/* END demo only */
+
+
+
+
+
+
   </style>
   
   
@@ -395,7 +428,7 @@ text-align: center;
   <div class="">
     <div class="bf_intro_splash_text">
   		  <p class="msg1" data-in-effect="rotateInDownRight" data-out-effect="hinge">
-  		  	hola Cali, el chat está en vivo
+  		  	hola Cali, a ver qué tal te gusta...
   		  <h1>CaliOviedo.com</h1>
   		  <p class="msg2" data-in-effect="bounceInDown">
   		  	aquí decimos algo a los clientes
@@ -412,30 +445,44 @@ text-align: center;
   </div>
 -->
 
-  <div class="cali_title">Dr. Carlos Enrique Oviedo</div>
+<div id="#demo_title">Primero tu nombre... Hacé click</div>
+<div class="cali_title">Dr. Carlos Enrique Oviedo</div>
 
-  <img class="cali_law_office_img" src="kisspng-computer-icons-justice-symbol-measuring-scales-cli-judge-vector-5adaf6cce7e864.5774930715242994689499.png" alt="Smiley face" width="100" height="100">
+<div id="#demo_logo">A ver si te gusta la balanza? Hacé click</div>
+<div class="cali_logo">
+    <img class="cali_law_office_img" src="kisspng-computer-icons-justice-symbol-measuring-scales-cli-judge-vector-5adaf6cce7e864.5774930715242994689499.png" alt="Smiley face" width="100" height="100">
+</div>
   
-   <div class="cali_desc">Abogado Matrícula Federal</div>
-	<div class="invisible_space">.</div>
+<div id="#demo_desc">Ahora pongamos tu título... Hacé click</div>
+<div class="cali_desc">Abogado Matrícula Federal</div>
+<div class="invisible_space">.</div>
 	
-
-	
+<div id="#demo_video">Y por último, te producí un video introductorio, que después le agregamos un locutor, que hable a cerca tuyo con la voz en off. A ver si te gusta?... Hacé click</div>
+<div class="cali_video">
   <div class="youtube_video">
     <iframe id="featured_video" width="1280" height="720" src="https://www.youtube.com/embed/fsASqBZTsKU?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
+</div>
 
-	
-  </div>
+</div>
 </div>  
-  
-    <a href="https://wa.me/543764952222/?text=Hola%20Dr.%20Oviedo,%20necesito%20entrar%20en%20contacto%20con%20usted,%20por%20favor. Mi%20nombre%20es:%20"><img class="cali_whatsapp" src="https://image.flaticon.com/icons/png/512/134/134937.png" alt="" width="50" height="50"></a>
 
-	<div class="cali_urgencias">
+<div id="#demo_whatsapp">Pongamos también whatsapp, para que la gente pueda entrar en contacto con vos rapidamente, y directamente desde aquí... Hacé click</div>
+<div class="cali_whatsapp">
+    <a href="https://wa.me/543764952222/?text=Hola%20Dr.%20Oviedo,%20necesito%20entrar%20en%20contacto%20con%20usted,%20por%20favor. Mi%20nombre%20es:%20"><img class="cali_whatsapp" src="https://image.flaticon.com/icons/png/512/134/134937.png" alt="" width="50" height="50"></a>
+</div>
+
+<div id="demo_urgencias">Aconsejo que también agreguemos tu número, bien a la vista, para urgencias. Hacé click</div>
+
+<div class="cali_urgencias">
 	  <div class="cali_urgencias_title">urgencias</div>
 	  <div class="cali_urgencias_tel">3764373233</div>
 </div>
-  
+
+
+<div id="#demo_chat">Agreguemos también un sistema de comunicaciones completo. Te programé un chat, y mensajería de email directo, llamados telefónicos, visualización de tu Twitter, y finalmente ubicación geológica para que la gente también pueda ver en qué zona es tu oficina. Hacé click</div>
+
+<div id="demo_end">Listo! Terminamos la demostración de hoy. Por favor, decime cualquier cosa que querés cambiar, o agregar, o mejorar. Hacé click para esconder este mensaje ahora</div>
 
   
   <!-- ////////////////////////// -->
@@ -519,7 +566,104 @@ $(document).ready(function() {
 // END website welcome splash ////////////////
 ///////////////////////////////////////////////
 
+///////////////////////////////////////////////
+// BEGIN website demo ////////////////
+///////////////////////////////////////////////
+$(document).ready(function() {
+
+    $(".cali_title").hide();
+    $("#demo_title").hide();
 	
+    $(".cali_desc").hide();
+    $("#demo_desc").hide();
+
+    $(".cali_logo").hide();
+    $("#demo_logo").hide();
+
+    $(".cali_video").hide();
+    $("#demo_video").hide();
+	
+    $(".cali_urgencias").hide();
+    $("#demo_urgencias").hide();
+	
+    $(".cali_whatsapp").hide();
+    $("#demo_whatsapp").hide();
+	
+    $(".cali_chat").hide();
+    $("#demo_chat").hide();
+
+    $("#demo_end").hide();
+	
+  setTimeout(function() {
+      $("#demo_title").show("slow");
+  }, 2000);
+
+$("#demo_title").on("click",function(e){
+$("#demo_title").css("display", "none");
+    $(".cali_title").show("slow");
+setTimeout(function() {
+$("#demo_desc").show("slow");
+}, 2000);
+});
+
+$("#demo_desc").on("click",function(e){
+$("#demo_desc").css("display", "none");
+    $(".cali_desc").show("slow");
+setTimeout(function() {
+$("#demo_logo").show("slow");
+}, 2000);
+});
+
+$("#demo_logo").on("click",function(e){
+$("#demo_logo").css("display", "none");
+    $(".cali_logo").show("slow");
+setTimeout(function() {
+$("#demo_urgencias").show("slow");
+}, 2000);
+});
+
+$("#demo_urgencias").on("click",function(e){
+$("#demo_urgencias").css("display", "none");
+    $(".cali_urgencias").show("slow");
+setTimeout(function() {
+$("#demo_whatsapp").show("slow");
+}, 2000);
+});
+
+$("#demo_whatsapp").on("click",function(e){
+$("#demo_whatsapp").css("display", "none");
+    $(".cali_whatsapp").show("slow");
+setTimeout(function() {
+$("#demo_chat").show("slow");
+}, 2000);
+});
+
+$("#demo_chat").on("click",function(e){
+$("#demo_chat").css("display", "none");
+    $(".cali_chat").show("slow");
+setTimeout(function() {
+$("#demo_video").show("slow");
+}, 2000);
+});
+
+$("#demo_video").on("click",function(e){
+$("#demo_video").css("display", "none");
+    $(".cali_video").show("slow");
+setTimeout(function() {
+$("#demo_end").show("slow");
+}, 2000);
+});
+
+$("#demo_end").on("click",function(e){
+$("#demo_end").css("display", "none");
+});
+
+
+});
+///////////////////////////////////////////////
+// END website demo ////////////////
+///////////////////////////////////////////////
+
 </script>
 	
 	
