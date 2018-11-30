@@ -80,214 +80,212 @@
 
   
   <style>
-  
-  @font-face {
+
+@font-face {
   font-family: "PT_Sans-Narrow-Web-Regular";
-  src: url(PT_Sans-Narrow-Web-Regular.ttf) format("truetype");
+  src: url(https://alexbible.github.io/cali/PT_Sans-Narrow-Web-Regular.ttf)
+    format("truetype");
 }
 
-  html,
-  body {
-    position: relative;
-    height: 100%;
-         font-family: "PT_Sans-Narrow-Web-Regular", sans-serif;
-         font-size: calc(16px + (32 - 16) * ( (100vw - 320px) / (4096 - 320)));
-         color: #ae9c80;
-         margin: 0 auto;
-         background: black;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-  }
+html,
+body {
+  position: relative;
+  height: 100%;
+  font-family: "PT_Sans-Narrow-Web-Regular", sans-serif;
+  font-size: calc(16px + (32 - 16) * ( (100vw - 320px) / (4096 - 320)));
+  color: #ae9c80;
+  margin: 0 auto;
+  background: black;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
 
+.bf_loadersmall {
+  display: inline-block;
+  text-align: center;
+  margin: 10px auto;
+  border: 5px solid none;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  border-top: 5px solid #d5ad6d;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
+.box_shadow {
+  box-shadow: 5px 3px 30px black;
+}
 
-    .bf_loadersmall {
-    display: inline-block;
-    text-align: center;
-    margin: 10px auto;
-    border: 5px solid none;
-    -webkit-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite;
-    border-top: 5px solid #d5ad6d;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-  }
-  @-webkit-keyframes spin {
-    0% {
-      -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes spin {
-    0% {
-      -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-
-  .box_shadow {
-    box-shadow: 5px 3px 30px black;
-  }
-
-  .bf_lock_n_load_wrap {
-position: fixed;
-    margin: 0 auto;
-    /* top: 4px; */
-    /* bottom: 4px; */
-    /* right: 4px; */
-    /* left: 4px; */
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    background: black;
-  }
-  .bf_lock_n_load {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: 0 auto;
-    width: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    color: #d5ad6d;
-    text-align: center;
-    text-shadow: 2px 2px 1px #000000;
-    z-index: 7;
-    background: none;
-  }
-  .bf_intro_logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    color: #d5ad6d;
-    text-align: center;
-    text-shadow: 2px 2px 1px #000000;
-  }
-  .bf_intro_splash_text_wrap {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-  .bf_intro_splash_text {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    color: #d5ad6d;
-    text-align: center;
-    text-shadow: 2px 2px 1px #000000;
-    z-index: 6;
-  }
-  .bf_intro_splash_text h1 {
-    border-bottom: 0px;
-  }
-  .bf_intro_splash_text > p.msg2 {
+.bf_lock_n_load_wrap {
+  position: fixed;
+  margin: 0 auto;
+  /* top: 4px; */
+  /* bottom: 4px; */
+  /* right: 4px; */
+  /* left: 4px; */
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background: black;
+}
+.bf_lock_n_load {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: #d5ad6d;
+  text-align: center;
+  text-shadow: 2px 2px 1px #000000;
+  z-index: 7;
+  background: none;
+}
+.bf_intro_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #d5ad6d;
+  text-align: center;
+  text-shadow: 2px 2px 1px #000000;
+}
+.bf_intro_splash_text_wrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.bf_intro_splash_text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #d5ad6d;
+  text-align: center;
+  text-shadow: 2px 2px 1px #000000;
+  z-index: 6;
+}
+.bf_intro_splash_text h1 {
+  border-bottom: 0px;
+}
+.bf_intro_splash_text > p.msg2 {
   padding-right: 1% !important;
-  }
-  .bf_intro_splash_bg {
-    position: fixed;
-    display: block;
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
-    z-index: 5;
-  }
-  
-  
-    .bgc-0007 {
-    background: hsl(80, 100%, 15%) !important;
-    background: -moz-radial-gradient(
-      center,
-      ellipse cover,
-      hsl(80, 100%, 15%)0%,
-      hsl(80, 100%, 15%)100%
+}
+.bf_intro_splash_bg {
+  position: fixed;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+}
+
+.bgc-0007 {
+  background: hsl(80, 100%, 15%) !important;
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    hsl(80, 100%, 15%)0%,
+    hsl(80, 100%, 15%)100%
+  ) !important;
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    color-stop(0%, hsl(80, 100%, 15%)),
+    color-stop(100%, hsl(0, 0%, 0%))
+  ) !important;
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    hsl(100, 100%, 20%) 0%,
+    hsl(0, 0%, 0%) 100%
+  ) !important;
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    hsl(50, 100%, 20%) 0%,
+    hsl(0, 0%, 0%) 100%
+  ) !important;
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    hsl(80, 100%, 15%) 0%,
+    hsl(0, 0%, 0%) 100%
+  ) !important;
+  background: radial-gradient(
+    ellipse at center,
+    hsl(80, 100%, 15%) 0%,
+    hsl(0, 0%, 0%) 100%
+  ) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="hsl(80,100%,15%)",
+      endColorstr="#0",
+      GradientType=1
     ) !important;
-    background: -webkit-gradient(
-      radial,
-      center center,
-      0px,
-      center center,
-      100%,
-      color-stop(0%, hsl(80, 100%, 15%)),
-      color-stop(100%, hsl(0, 0%, 0%))
-    ) !important;
-    background: -webkit-radial-gradient(
-      center,
-      ellipse cover,
-      hsl(100, 100%, 20%) 0%,
-      hsl(0, 0%, 0%) 100%
-    ) !important;
-    background: -o-radial-gradient(
-      center,
-      ellipse cover,
-      hsl(50, 100%, 20%) 0%,
-      hsl(0, 0%, 0%) 100%
-    ) !important;
-    background: -ms-radial-gradient(
-      center,
-      ellipse cover,
-      hsl(80, 100%, 15%) 0%,
-      hsl(0, 0%, 0%) 100%
-    ) !important;
-    background: radial-gradient(
-      ellipse at center,
-      hsl(80, 100%, 15%) 0%,
-      hsl(0, 0%, 0%) 100%
-    ) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(
-        startColorstr="hsl(80,100%,15%)",
-        endColorstr="#0",
-        GradientType=1
-      ) !important;
-  }
-  
+}
+
 iframe#featured_video {
-min-height: 280px;
+  min-height: 280px;
 }
 #featured_video {
   display: block;
@@ -307,116 +305,100 @@ min-height: 280px;
 }
 /* gofundme widget container */
 .gofundme_widget {
-    border: 5px solid #141a00;
-	-webkit-border-radius: 8px;
--moz-border-radius: 8px;
-border-radius: 8px;
-	}
+  border: 5px solid #141a00;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
 .youtube_video {
-    border: 5px solid #141a00;
-	-webkit-border-radius: 8px;
--moz-border-radius: 8px;
-border-radius: 8px;
-	}
-	
+  border: 5px solid #141a00;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
 .cali_title {
-font-size: 26px;
-    color: #e3cd81;
-	text-align: center;
-	    text-shadow: 2px 2px 1px #000000;
+  font-size: 26px;
+  color: #e3cd81;
+  text-align: center;
+  text-shadow: 2px 2px 1px #000000;
 }
 .cali_desc {
-font-size: 24px;
-    color: #e3cd81;
-	text-align: center;
-	    text-shadow: 2px 2px 1px #000000;
+  font-size: 24px;
+  color: #e3cd81;
+  text-align: center;
+  text-shadow: 2px 2px 1px #000000;
 }
 
-
 .invisible_space {
-visibility: hidden;
-    line-height: 10px;
+  visibility: hidden;
+  line-height: 10px;
 }
 
 .cali_law_office_img {
-margin-top: 4px;
+  margin-top: 8px;
 }
 
 .cali_whatsapp {
-position: fixed;
-    bottom: 10px;
-    left: 28px;
-    width: 70px;
-    height: 70px;
-    cursor: pointer;
-    z-index: 1;
-	}
+  position: fixed;
+  bottom: 10px;
+  left: 28px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 1;
+}
 
 .cali_urgencias {
-position: fixed;
-    bottom: 0px;
-    color: #e3cd81;
-    text-shadow: 2px 2px 1px #000000;
-    width: 100%;
-    background: black;
-    height: 82px;
+  position: fixed;
+  bottom: 0px;
+  color: #e3cd81;
+  text-shadow: 2px 2px 1px #000000;
+  width: 100%;
+  background: black;
+  height: 82px;
 }
 .cali_urgencias_title {
-font-size: 28px;
-text-align: center;
+  font-size: 28px;
+  text-align: center;
 }
 
 .cali_urgencias_tel {
-font-size: 20px;
-text-align: center;
+  font-size: 20px;
+  text-align: center;
 }
-
-
 
 /* BEGIN demo only */
 
-#demo_title,
-#demo_desc,
-#demo_logo,
-#demo_video,
-#demo_urgencias,
-#demo_whatsapp,
-#demo_chat,
-#demo_end {
-color: #f3ff67;
-    font-size: 24px;
-    text-shadow: 2px 2px 1px #000000;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: left;
-    width: 90%;
-    padding: 5%;
-    background: rgba(0, 0, 0, 0.8);
-}
-
-#demo_end {
-color: #f3ff67;
-    font-size: 22px;
-    text-shadow: 2px 2px 1px #000000;
-    /* display: inline-block; */
-    /* vertical-align: middle; */
-    text-align: center;
-    width: 90%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
+#demo_intro_01,
+#demo_intro_02,
+#demo_intro_03,
+#demo_intro_04,
+#demo_intro_05,
+#demo_intro_06,
+#demo_intro_07,
+#demo_intro_08,
+#demo_intro_09,
+#demo_intro_10,
+#demo_intro_11,
+#demo_intro_12,
+#demo_intro_13,
+#demo_intro_14 {
+  color: #f3ff67;
+  font-size: 20px;
+  text-shadow: 2px 2px 1px #000000;
+  vertical-align: middle;
+  text-align: left;
+  width: 90%;
+  padding: 5%;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .hace_click_aqui {
-cursor: pointer;
-color: orange;
+  cursor: pointer;
+  color: orange;
 }
 /* END demo only */
-
-
-
-
 
 
   </style>
@@ -455,123 +437,165 @@ color: orange;
   
 <div class="container_video">
   <div class="centered">
-<!--  
-  <div class="gofundme_widget">
-	<iframe class='gfm-media-widget' image='0' coinfo='0' width='100%' height='100%' frameborder='0' id='biblefarmorg-example-campaign'></iframe><script src='//funds.gofundme.com/js/5.0/media-widget.js'></script>
+
+    <div id="demo_intro_01">
+      Te configuré un sistema completo
+      <br> de comunicaciones.
+      <div class="invisible_space">.</div>
+      Ya lo ves abajo a la derecha.
+      <br> No te preocupes. Es todo gratis.
+      <div class="invisible_space">.</div>
+      <div id="demo_continue_1" class="hace_click_aqui">continuar</div>
+    </div>
+
+    <div id="demo_intro_02">
+      Después te voy a dar una clase
+      <br> para atender a tus clientes.
+      <div class="invisible_space">.</div>
+      Lo podés hacer desde tu PC
+      <br> y también desde tu celular.
+      <div class="invisible_space">.</div>
+      <div id="demo_continue_2" class="hace_click_aqui">continuar</div>
+    </div>
+
+    <div id="demo_intro_03">
+      Tenés estas cosas principales:
+      <div class="invisible_space">.</div>
+      * Chat en vivo profesional
+      <div class="invisible_space">.</div>
+      * Email directo desde la página
+      <div class="invisible_space">.</div>
+      * Llamados telefónicos directos
+      <br> desde la página en celulares
+      <div class="invisible_space">.</div>
+      <div id="demo_continue_3" class="hace_click_aqui">continuar</div>
+    </div>
+
+    <div id="demo_intro_04">
+      También tenés:
+      <div class="invisible_space">.</div>
+      * Vista de tu muro en Twitter,
+      <br> sin que el cliente se te vaya.
+      <div class="invisible_space">.</div>
+      * Vista de ubicación geográfica
+      <br> para que la gente pueda ver
+      <br> en qué zona es tu oficina.
+      <div class="invisible_space">.</div>
+      <div id="demo_continue_4" class="hace_click_aqui">continuar</div>
+    </div>
+
+    <div id="demo_intro_05">
+      Comencemos la demostración:
+      <div class="invisible_space">.</div>
+      Pongamos tu nombre...
+      <div class="invisible_space">.</div>
+      <div>
+        <span>Hacé click</span> <span id="demo_title" class="hace_click_aqui">aquí</span>
+      </div>
+    </div>
+
+    <div class="cali_title">Dr. Carlos Enrique Oviedo</div>
+
+    <div id="demo_intro_07">
+      A ver si te gusta tu balanza?
+      <div class="invisible_space">.</div>
+      <div>
+        <span>Hacé click</span> <span id="demo_logo" class="hace_click_aqui">aquí</span>
+      </div>
+    </div>
+    <div class="cali_logo">
+      <img class="cali_law_office_img" src="https://alexbible.github.io/cali/kisspng-computer-icons-justice-symbol-measuring-scales-cli-judge-vector-5adaf6cce7e864.5774930715242994689499.png" alt="Smiley face" width="100" height="100">
+    </div>
+
+    <div id="demo_intro_06">
+      Ahora pongamos tu título...
+      <div class="invisible_space">.</div>
+      <div>
+        <span>Hacé click</span> <span id="demo_desc" class="hace_click_aqui">aquí</span>
+      </div>
+    </div>
+    <div class="cali_desc">Abogado Matrícula Federal</div>
+    <div class="invisible_space">.</div>
+
+    <div id="demo_intro_08">
+      Aconsejo que también
+      <br> agreguemos tu número de cel,
+      <br> bien a la vista, para urgencias...
+      <div class="invisible_space">.</div>
+      <div>
+        <span>Hacé click</span> <span id="demo_urgencias" class="hace_click_aqui">aquí</span>
+      </div>
+    </div>
+
+    <div id="demo_intro_09">
+      Pongamos whatsapp también,
+      <br> así la gente puede entrar
+      <br> en contacto con vos rapidamente,
+      <br> y directamente desde aquí...
+      <div class="invisible_space">.</div>
+      <div>
+        <span>Hacé click</span> <span id="demo_whatsapp" class="hace_click_aqui">aquí</span>
+      </div>
+    </div>
+
+    <div id="demo_intro_10">
+      Por favor, decime cualquier cosita que
+      <br> querés cambiar, o agregar, o mejorar.
+      <div class="invisible_space">.</div>
+      <div id="demo_continue_11" class="hace_click_aqui">continuar</div>
+    </div>
+
+    <div id="demo_intro_11">
+      Te producí un video introductorio.
+      <div class="invisible_space">.</div>
+      Por ahora solo tiene musiquita de fondo.
+      <div class="invisible_space">.</div>
+      Después le agregamos una locutora,
+      <br> que hable acerca tuyo con la voz en off.
+      <div>
+        <div class="invisible_space">.</div>
+        <div id="demo_continue_12" class="hace_click_aqui">continuar</div>
+      </div>
+    </div>
+
+    <div id="demo_intro_12">
+      Andá pensando, y haceme un parrafito
+      <br> de lo que te gustaria decir durante
+      <br> el video. Y le pedimos a una de las
+      <br> chicas que lo lea en el micrófono.
+      <div class="invisible_space">.</div>
+      <div>
+        <div id="demo_continue_13" class="hace_click_aqui">continuar</div>
+      </div>
+    </div>
+
+    <div id="demo_intro_13">
+      Concluímos la demostración de hoy.
+      <div class="invisible_space">.</div>
+      Un abrazo, Cali!
+      <div class="invisible_space">.</div>
+      <div>
+        <span>Cerrar demo y ver video...</span> <span id="demo_continue_14" class="hace_click_aqui">dale</span>
+      </div>
+    </div>
+
+    <div class="cali_video">
+      <div class="youtube_video">
+        <iframe id="featured_video" width="1280" height="720" src="https://www.youtube.com/embed/fsASqBZTsKU?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
   </div>
--->
-
-<div id="demo_title" style="">
-Te configuré un sistema de comunicaciones completo.
-<div class="invisible_space">.</div>
-Ya lo ves aquí abajo a la derecha.
-<br>
-No te preocupes. Es todo gratis.
-<div class="invisible_space">.</div>
-Tenés todas estas cosas:
-<div class="invisible_space">.</div>
-* Chat en vivo profesional
-<br>
-* Mensajería de email directo desde esta página.
-<br>
-* Llamados telefónicos directos, para gente que accedede tu página en un celular.
-<br>
-* Visualización de tu muro en Twitter, sin salirse de tu página.
-<br>
-* Y finalmente, ubicación geofrágica para que la gente también pueda ver en qué zona es tu oficina.
-<div class="invisible_space">.</div>
-Después te voy a dar una clase para que aprendas a atender a los clientes, desde tu compu, y también desde tu celular.
-<div class="invisible_space">.</div>
-Comencemos la demostración:
-<div class="invisible_space">.</div>
-Primero tu nombre...
-<div class="invisible_space">.</div>
-Hacé click <span class="hace_click_aqui">aquí</span>
 </div>
-
-<div class="cali_title">Dr. Carlos Enrique Oviedo</div>
-
-<div id="demo_logo">
-A ver si te gusta la balanza?
-<div class="invisible_space">.</div>
-Hacé click <span class="hace_click_aqui">aquí</span>
-</div>
-<div class="cali_logo">
-    <img class="cali_law_office_img" src="kisspng-computer-icons-justice-symbol-measuring-scales-cli-judge-vector-5adaf6cce7e864.5774930715242994689499.png" alt="Smiley face" width="100" height="100">
-</div>
-  
-<div id="demo_desc">
-Ahora pongamos tu título...
-<div class="invisible_space">.</div>
-Hacé click <span class="hace_click_aqui">aquí</span>
-</div>
-<div class="cali_desc">Abogado Matrícula Federal</div>
-<div class="invisible_space">.</div>
-
-<div id="demo_urgencias">
-Aconsejo que también agreguemos tu número,
-<br>
-bien a la vista, para urgencias...
-<div class="invisible_space">.</div>
-Hacé click <span class="hace_click_aqui">aquí</span>
-</div>
-
-<div id="demo_whatsapp">
-Pongamos whatsapp también,
-<br>
-para que la gente pueda entrar
-<br>
-en contacto con vos rapidamente,
-<br>
-y directamente desde aquí...
-<div class="invisible_space">.</div>
-Hacé click <span class="hace_click_aqui">aquí</span>
-</div>
-	
-<div id="demo_video">
-También te producí un video introductorio,
-<br>
-que después le agregamos un locutor,
-<br>
-que hable a cerca tuyo con la voz en off.
-<div class="invisible_space">.</div>
-A ver si te gusta?
-<div class="invisible_space">.</div>
-Hacé click <span class="hace_click_aqui">aquí</span>
-</div>
-<div class="cali_video">
-  <div class="youtube_video">
-    <iframe id="featured_video" width="1280" height="720" src="https://www.youtube.com/embed/fsASqBZTsKU?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
-
-<div id="demo_end">
-<div class="invisible_space">.</div>
-Terminamos la demostración de hoy.
-<br>
-Por favor, decime cualquier cosita,
-<br>
-que querés cambiar, o agregar, o mejorar.
-<div class="invisible_space">.</div>
-Para esconder este mensaje ahora...
-<div class="invisible_space">.</div>
-Hacé click <span class="hace_click_aqui">aquí</span>
-<div class="invisible_space">.</div>
-</div>
-
-
-</div>
-</div>  
 
 <div class="cali_whatsapp">
-    <a href="https://wa.me/543764952222/?text=Hola%20Dr.%20Oviedo,%20necesito%20entrar%20en%20contacto%20con%20usted,%20por%20favor. Mi%20nombre%20es:%20"><img class="cali_whatsapp" src="https://image.flaticon.com/icons/png/512/134/134937.png" alt="" width="50" height="50"></a>
+  <a href="https://wa.me/543764952222/?text=Hola%20Dr.%20Oviedo,%20necesito%20entrar%20en%20contacto%20con%20usted,%20por%20favor. Mi%20nombre%20es:%20"><img class="cali_whatsapp" src="https://image.flaticon.com/icons/png/512/134/134937.png" alt="" width="50" height="50"></a>
 </div>
 
 <div class="cali_urgencias">
-	  <div class="cali_urgencias_title">urgencias</div>
-	  <div class="cali_urgencias_tel">3764373233</div>
+  <div class="cali_urgencias_title">urgencias</div>
+  <div class="cali_urgencias_tel">3764373233</div>
 </div>
-
 
 
   
@@ -660,93 +684,141 @@ $(document).ready(function() {
 // BEGIN website demo ////////////////
 ///////////////////////////////////////////////
 $(document).ready(function() {
+  $("#demo_intro_01").hide();
+  $("#demo_intro_02").hide();
+  $("#demo_intro_03").hide();
+  $("#demo_intro_04").hide();
+  $("#demo_intro_05").hide();
+  $("#demo_intro_06").hide();
+  $("#demo_intro_07").hide();
+  $("#demo_intro_08").hide();
+  $("#demo_intro_09").hide();
+  $("#demo_intro_10").hide();
+  $("#demo_intro_11").hide();
+  $("#demo_intro_12").hide();
+  $("#demo_intro_13").hide();
+  $("#demo_intro_14").hide();
 
-    $("#PureChatWidget").hide();
+  $(".cali_title").hide();
+  $("#demo_title").hide();
 
-    $(".cali_title").hide();
-    $("#demo_title").hide();
-	
-    $(".cali_desc").hide();
-    $("#demo_desc").hide();
+  $(".cali_desc").hide();
+  $("#demo_desc").hide();
 
-    $(".cali_logo").hide();
-    $("#demo_logo").hide();
+  $(".cali_logo").hide();
+  $("#demo_logo").hide();
 
-    $(".cali_video").hide();
-    $("#demo_video").hide();
-	
-    $(".cali_urgencias").hide();
-    $("#demo_urgencias").hide();
-	
-    $(".cali_whatsapp").hide();
-    $("#demo_whatsapp").hide();
-	
-    $(".cali_chat").hide();
-    $("#demo_chat").hide();
+  $(".cali_video").hide();
+  $("#demo_video").hide();
 
-    $("#demo_end").hide();
-	
+  $(".cali_urgencias").hide();
+  $("#demo_urgencias").hide();
+
+  $(".cali_whatsapp").hide();
+  $("#demo_whatsapp").hide();
+
+  $(".cali_chat").hide();
+  $("#demo_chat").hide();
+
+  $("#demo_end").hide();
+
   setTimeout(function() {
-      $("#demo_title").show("slow");
+    $("#demo_intro_01").show("slow");
+    $("#demo_title").show("slow");
   }, 3000);
 
-$("#demo_title").on("click",function(e){
-$("#demo_title").css("display", "none");
+  $("#demo_continue_1").on("click", function(e) {
+    $("#demo_intro_01").hide("slow");
+    $("#demo_intro_02").show("slow");
+  });
+  $("#demo_continue_2").on("click", function(e) {
+    $("#demo_intro_02").hide("slow");
+    $("#demo_intro_03").show("slow");
+  });
+  $("#demo_continue_3").on("click", function(e) {
+    $("#demo_intro_03").hide("slow");
+    $("#demo_intro_04").show("slow");
+  });
+  $("#demo_continue_4").on("click", function(e) {
+    $("#demo_intro_04").hide("slow");
+    $("#demo_intro_05").show("slow");
+  });
+
+  $("#demo_title").on("click", function(e) {
+    $("#demo_intro_05").hide("slow");
+    $("#demo_title").hide("slow");
     $(".cali_title").show("slow");
-setTimeout(function() {
-$("#demo_desc").show("slow");
-}, 3000);
-});
+    setTimeout(function() {
+      $("#demo_intro_06").show("slow");
+      $("#demo_desc").show("slow");
+    }, 3000);
+  });
 
-$("#demo_desc").on("click",function(e){
-$("#demo_desc").css("display", "none");
+  $("#demo_desc").on("click", function(e) {
+    $("#demo_intro_06").hide("slow");
+    $("#demo_desc").hide("slow");
     $(".cali_desc").show("slow");
-setTimeout(function() {
-$("#demo_logo").show("slow");
-}, 3000);
-});
+    setTimeout(function() {
+      $("#demo_intro_07").show("slow");
+      $("#demo_logo").show("slow");
+    }, 3000);
+  });
 
-$("#demo_logo").on("click",function(e){
-$("#demo_logo").css("display", "none");
+  $("#demo_logo").on("click", function(e) {
+    $("#demo_intro_07").hide("slow");
+    $("#demo_logo").hide("slow");
     $(".cali_logo").show("slow");
-setTimeout(function() {
-$("#demo_urgencias").show("slow");
-}, 3000);
-});
+    setTimeout(function() {
+      $("#demo_intro_08").show("slow");
+      $("#demo_urgencias").show("slow");
+    }, 3000);
+  });
 
-$("#demo_urgencias").on("click",function(e){
-$("#demo_urgencias").css("display", "none");
-    $("body").find(".cali_urgencias").show("slow");
-setTimeout(function() {
-$("#demo_whatsapp").show("slow");
-}, 3000);
-});
+  $("#demo_urgencias").on("click", function(e) {
+    $("#demo_intro_08").hide("slow");
+    $("#demo_urgencias").hide("slow");
+    $("body")
+      .find(".cali_urgencias")
+      .show("slow");
+    setTimeout(function() {
+      $("#demo_intro_09").show("slow");
+      $("#demo_whatsapp").show("slow");
+    }, 3000);
+  });
 
-$("#demo_whatsapp").on("click",function(e){
-$("#demo_whatsapp").css("display", "none");
+  $("#demo_whatsapp").on("click", function(e) {
+    $("#demo_intro_09").hide("slow");
+    $("#demo_whatsapp").hide("slow");
     $(".cali_whatsapp").show("slow");
-setTimeout(function() {
-$("#demo_video").show("slow");
-}, 3000);
-});
+    setTimeout(function() {
+      $("#demo_intro_10").show("slow");
+    }, 3000);
+  });
 
-$("#demo_video").on("click",function(e){
-$("#demo_video").css("display", "none");
+  $("#demo_continue_11").on("click", function(e) {
+    $("#demo_intro_10").hide("slow");
+    $("#demo_intro_11").show("slow");
+  });
+
+  $("#demo_continue_12").on("click", function(e) {
+    $("#demo_intro_11").hide("slow");
+    $("#demo_intro_12").show("slow");
+  });
+
+  $("#demo_continue_13").on("click", function(e) {
+    $("#demo_intro_12").hide("slow");
+    $("#demo_intro_13").show("slow");
+  });
+
+  $("#demo_continue_14").on("click", function(e) {
+    $("#demo_intro_13").hide("slow");
     $(".cali_video").show("slow");
-setTimeout(function() {
-$("#demo_end").show("slow");
-}, 3000);
-});
-
-$("#demo_end").on("click",function(e){
-$("#demo_end").css("display", "none");
-});
-
-
+  });
 });
 ///////////////////////////////////////////////
 // END website demo ////////////////
 ///////////////////////////////////////////////
+
 
 </script>
 	
