@@ -383,7 +383,9 @@ iframe#featured_video {
 #demo_intro_11,
 #demo_intro_12,
 #demo_intro_13,
-#demo_intro_14 {
+#demo_intro_14,
+#demo_intro_15,
+#demo_intro_16 {
   color: #f3ff67;
   font-size: 20px;
   text-shadow: 2px 2px 1px #000000;
@@ -527,14 +529,12 @@ iframe#featured_video {
       </div>
     </div>
 
-    <div id="demo_intro_09">
-      Pongamos whatsapp también,
-      <br> así la gente puede entrar
-      <br> en contacto con vos rapidamente,
-      <br> y directamente desde aquí...
+    <div id="demo_intro_09" style="">
+      Whatsapp es esencial hoy en día,
+      <br> hagámoslo directamente desde aquí...
       <div class="invisible_space">.</div>
       <div>
-        <span>Hacé click</span> <span id="demo_whatsapp" class="hace_click_aqui">aquí</span>
+        <span>Hacé click</span> <span id="demo_whatsapp" class="hace_click_aqui" style="">aquí</span>
       </div>
     </div>
 
@@ -550,32 +550,35 @@ iframe#featured_video {
       <div class="invisible_space">.</div>
       Por ahora solo tiene musiquita de fondo.
       <div class="invisible_space">.</div>
-      Después le agregamos una locutora,
-      <br> que hable acerca tuyo con la voz en off.
-      <div>
-        <div class="invisible_space">.</div>
-        <div id="demo_continue_12" class="hace_click_aqui">continuar</div>
-      </div>
+      <div id="demo_continue_12" class="hace_click_aqui">continuar</div>
     </div>
 
     <div id="demo_intro_12">
-      Andá pensando, y haceme un parrafito
-      <br> de lo que te gustaria decir durante
-      <br> el video. Y le pedimos a una de las
-      <br> chicas que lo lea en el micrófono.
+      Después le agregamos una locutora,
+      <br> que hable acerca tuyo con la voz en off.
       <div class="invisible_space">.</div>
-      <div>
-        <div id="demo_continue_13" class="hace_click_aqui">continuar</div>
-      </div>
+      <div id="demo_continue_13" class="hace_click_aqui">continuar</div>
     </div>
 
     <div id="demo_intro_13">
-      Concluímos la demostración de hoy.
+      Necesito que me escribas un parrafito con
+      <br> lo que te gustaría relatar en el video.
       <div class="invisible_space">.</div>
+      <div id="demo_continue_14" class="hace_click_aqui">continuar</div>
+    </div>
+
+    <div id="demo_intro_14">
+      Y le pedimos a una de las chicas
+      <br> que lo lea en el micrófono.
+      <div class="invisible_space">.</div>
+      <div id="demo_continue_15" class="hace_click_aqui">continuar</div>
+    </div>
+
+    <div id="demo_intro_15">
       Un abrazo, Cali!
       <div class="invisible_space">.</div>
       <div>
-        <span>Cerrar demo y ver video...</span> <span id="demo_continue_14" class="hace_click_aqui">dale</span>
+        <span>Mirá el video...</span> <span id="demo_continue_16" class="hace_click_aqui">dale</span>
       </div>
     </div>
 
@@ -596,7 +599,6 @@ iframe#featured_video {
   <div class="cali_urgencias_title">urgencias</div>
   <div class="cali_urgencias_tel">3764373233</div>
 </div>
-
 
   
   <!-- ////////////////////////// -->
@@ -698,6 +700,8 @@ $(document).ready(function() {
   $("#demo_intro_12").hide();
   $("#demo_intro_13").hide();
   $("#demo_intro_14").hide();
+  $("#demo_intro_15").hide();
+  $("#demo_intro_16").hide();
 
   $(".cali_title").hide();
   $("#demo_title").hide();
@@ -812,6 +816,16 @@ $(document).ready(function() {
 
   $("#demo_continue_14").on("click", function(e) {
     $("#demo_intro_13").hide("slow");
+    $("#demo_intro_14").show("slow");
+  });
+
+  $("#demo_continue_15").on("click", function(e) {
+    $("#demo_intro_14").hide("slow");
+    $("#demo_intro_15").show("slow");
+  });
+
+  $("#demo_continue_16").on("click", function(e) {
+    $("#demo_intro_15").hide("slow");
     $(".cali_video").show("slow");
   });
 });
