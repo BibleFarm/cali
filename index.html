@@ -877,7 +877,11 @@ $(document).ready(function() {
 ///////////////////////////////////////////////
 // BEGIN website demo ////////////////
 ///////////////////////////////////////////////
+
 $(document).ready(function() {
+  $(".cover_pure_chat").hide("slow");
+  $("body").addClass("bgc-0001");
+
   $("#demo_intro_01").hide();
   $("#demo_intro_02").hide();
   $("#demo_intro_03").hide();
@@ -895,6 +899,12 @@ $(document).ready(function() {
   $("#demo_intro_15").hide();
   $("#demo_intro_16").hide();
 
+  // BEGIN uncomment to return to demo state
+  /*
+
+  $(".cover_pure_chat").show("slow");
+  $("body").removeClass("bgc-0001");
+
   $(".cali_title").hide();
 
   $(".cali_desc").hide();
@@ -902,14 +912,10 @@ $(document).ready(function() {
   $(".cali_logo").hide();
 
   $(".cali_video").hide();
-  $("#demo_video").hide();
 
   $(".cali_urgencias").hide();
 
   $(".cali_whatsapp").hide();
-
-  $(".cali_chat").hide();
-  $("#demo_chat").hide();
 
   $("#demo_end").hide();
 
@@ -922,7 +928,6 @@ $(document).ready(function() {
     $("#demo_intro_02").show("slow");
     $(".cover_pure_chat").hide("slow");
     $("body").addClass("bgc-0001");
-    
   });
   $("#demo_continue_2").on("click", function(e) {
     $("#demo_intro_02").hide("slow");
@@ -1008,7 +1013,10 @@ $(document).ready(function() {
     $("#demo_intro_15").hide("slow");
     $(".cali_video").show("slow");
   });
+*/
+  // END uncomment to return to demo state
 });
+
 ///////////////////////////////////////////////
 // END website demo ////////////////
 ///////////////////////////////////////////////
