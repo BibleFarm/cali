@@ -106,7 +106,7 @@ body {
 font-family: 'PT Sans Narrow', sans-serif;
 font-weight: 700;
 color: #ae9c80;
-    background: green;
+    background: brown;
 }
 
 .wrap_options_bar {
@@ -155,24 +155,27 @@ color: lightblue;
 }
 .wrap_show_options {
 width: 100vw;
-    position: absolute;
     min-width: 320px;
-    max-width: 640px;
+    max-width: 320px;
     margin: 0 auto;
 }
 .show_sharing_options, .show_sending_options, .show_saving_options {
-	display: none;
-width: 100vw;
+display: none;
+    width: 100vw;
     margin: 0 auto;
     text-align: center;
     max-width: 320px;
-	position: absolute;
-    bottom: 50;
-	left: 0;
-	right: 0;
+    left: 0;
+    right: 0;
     z-index: 2;
     background: #100f0b;
+    height: 140px;
 }
+  
+.at-resp-share-element.at-mobile .at-share-btn {
+    margin-right: 3px !important;
+  }
+  
 .option_send {
 color: pink;
 }
