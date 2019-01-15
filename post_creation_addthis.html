@@ -139,6 +139,9 @@ width: 100vw;
   font-size: 20px;
   line-height: 50px;
 }
+#btn_countdown_start {
+  display: none;
+}
 
 .option_share, .option_send, .option_save, .option_link, .option_print, .option_edit {flex-grow: 1;
 flex-shrink: 1;
@@ -227,7 +230,9 @@ text-align: center;
 <!-- BEGIN wrap_options_bar -->
 <div class="wrap_options_bar">
 <!-- wait_to_load_options-->
-<div class="wait_to_load_options">loading in <span class="countdown_loading_addthis_options" data-start="9" data-end="0">10</span></div>
+<div class="wait_to_load_options">loading in <span class="countdown_loading_addthis_options"> 10</span>
+<button id="btn_countdown_start"> Start countdown </button>
+</div>
 <!-- BEGIN options_bar -->
 <div class="options_bar">
 <!-- edit button-->
@@ -304,35 +309,30 @@ $(document).ready(function() {
   ///////////////////////////////////////////////////
   /// BEGIN countdown_loading_addthis_options ///////
   ///////////////////////////////////////////////////
-  (function($) {
-    var countElem = $(".countdown_loading_addthis_options"),
-      startValue = $(".countdown_loading_addthis_options").data("start"),
-      endValue = $(".countdown_loading_addthis_options").data("end"),
-      count = startValue,
-      startDashArray = 201, // 32 * 2 * 3.14
-      dashArray = startDashArray,
-      roundedPath = $(".dark-path");
 
-    var countDown = function() {
-      if (count === endValue - 1) {
-        stopCountDown();
-      }
-      var t = setTimeout(function() {
-        countElem.html(count);
-        count -= 1;
-        dashArray += startDashArray / startValue;
-        roundedPath.css("strokeDasharray", dashArray);
-        countDown();
-      }, 1000);
-    };
+var timer1,
+  clock = 10;
+$(startup);
+function startup() {
+  $(start).trigger({ type: "click", which: 1 });
+}
+function start() {
+  clock = 10;
+  $(".countdown_loading_addthis_options").html("" + clock + "");
+  timer1 = setInterval(countdown, 1000);
+  $("#btnstart").prop("disabled", true);
+}
+function countdown() {
+  clock -= 1;
+  $(".countdown_loading_addthis_options").html("" + clock + "");
 
-    var stopCountDown = function() {
-      countElem.html("0");
-      clearTimeout(t);
-    };
+  if (clock == 0) {
+    clearInterval(timer1);
+    $("#btn_countdown_start").prop("disabled", false);
+  }
+}
 
-    countDown();
-  })(jQuery);
+
   ///////////////////////////////////////////////////
   /// BEGIN countdown_loading_addthis_options ///////
   ///////////////////////////////////////////////////
